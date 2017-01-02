@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  dotnetcore.client.web:
+    image: user/dotnetcore.client.web
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        source: ${DOCKER_BUILD_SOURCE}
